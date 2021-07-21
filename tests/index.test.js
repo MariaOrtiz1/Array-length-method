@@ -1,4 +1,4 @@
-import { jest } from '@jest/globals';
+import map from '../index.js';
 
 describe('map', () => {
   it('replaces .map with a .length function', () => {
