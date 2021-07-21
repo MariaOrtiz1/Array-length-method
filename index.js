@@ -12,4 +12,3 @@ export const map = (array, modification) => {
   return newArray;
 };
 
-export default map;
