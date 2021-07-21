@@ -1,4 +1,4 @@
-import { map } from '../index.js';
+import { map, filter } from '../index.js';
 
 describe('map', () => {
   it('replaces .map with a .length function', () => {

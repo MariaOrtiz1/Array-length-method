@@ -12,3 +12,14 @@ export const map = (array, modification) => {
   return newArray;
 };
 
+export const filter = (array, modification) => {
+  let newArray = [];
+  for (let numbers = 0; numbers < array.length; numbers++) {
+    if(array[numbers]) {
+      if(modification(array[numbers])) {
+        newArray = [...newArray, array[numbers]];
+      }
+    }
+  }
+  return newArray;
+};
