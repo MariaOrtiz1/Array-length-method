@@ -1,4 +1,4 @@
-import { map, filter } from '../index.js';
+import { map, filter, find } from '../index.js';
 
 describe('map', () => {
   it('takes an array and a callback function and creates a new array with the callback function implemented', () => {

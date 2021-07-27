@@ -23,3 +23,7 @@ export const filter = (array, modification) => {
   }
   return newArray;
 };
+
+export const find = (array, modification) => {
+  return 1;
+};
