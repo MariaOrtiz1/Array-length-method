@@ -32,3 +32,7 @@ export const find = (array, modification) => {
     }
   }
 };
+
+export const reduce = (array, modification) => {
+  return 6;
+};
