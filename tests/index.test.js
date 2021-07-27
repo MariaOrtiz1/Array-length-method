@@ -33,3 +33,15 @@ describe('find', () => {
   });
 });
 
+describe('reduce', () => {
+  it('takes an array and a callback function and optional value for the intial value of the callback functions accumulator', () => {
+    const numbers = [1, 2, 3];
+    const modification = (acc, item) => acc += item;
+    const expected = 6;
+    const actual = reduce(numbers, modification);
+
+    expect(actual).toEqual(expected);
+  });
+});
+
+
