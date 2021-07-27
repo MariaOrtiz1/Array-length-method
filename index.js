@@ -44,6 +44,13 @@ export const reduce = (array, modification, spec) => {
   return accumulator;
 };
 
-export const every = (arr, callBack) => {
-  return false;
+export const every = (array, modification) => {
+  for(let numbers = 0; numbers < array.length; numbers++) {
+    const item = array[numbers];
+    if(item) {
+      if(modification(item) === false) {
+        return false;
+      }
+    }
+  } return true;
 };
