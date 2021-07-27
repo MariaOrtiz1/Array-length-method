@@ -1,7 +1,7 @@
 import { map, filter } from '../index.js';
 
 describe('map', () => {
-  it('replaces .map with a .length function', () => {
+  it('takes an array and a callback function and creates a new array with the callback function implemented', () => {
     const numbers = [1, 2, 3, 4, 5];
     const modification = (item) => item * 2;
     const actual = map(numbers, modification);
@@ -21,3 +21,15 @@ describe('filter', () => {
     expect(expected).toEqual(actual);
   });
 });
+
+describe('find', () => {
+  it('takes an array and a callback fucntion and returns the index of the found item', () => {
+    const names = ['Angel', 'Missael', 'Maria'];
+    const modification = item => item[0].toLowerCase() === 'm';
+    const expected = 1;
+    const actual = find(names, modification);
+
+    expect(expected).toEqual(actual);
+  });
+});
+
