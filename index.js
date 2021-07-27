@@ -43,3 +43,7 @@ export const reduce = (array, modification, spec) => {
     }}
   return accumulator;
 };
+
+export const every = (arr, callBack) => {
+  return false;
+};
