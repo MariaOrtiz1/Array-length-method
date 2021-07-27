@@ -25,5 +25,10 @@ export const filter = (array, modification) => {
 };
 
 export const find = (array, modification) => {
-  return 1;
+  for(let names = 0; names < array.length; names++) {
+    if(array[names]) {
+      const item = array[names];
+      if(modification(item)) {return names;}
+    }
+  }
 };
