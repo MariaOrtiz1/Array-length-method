@@ -33,6 +33,13 @@ export const find = (array, modification) => {
   }
 };
 
-export const reduce = (array, modification) => {
-  return 6;
+export const reduce = (array, modification, spec) => {
+  let accumulator = spec === undefined ? 0 : spec;
+
+  for(let numbers = 0; numbers < array.length; numbers++) {
+    const item = array[numbers];
+    if(item) {
+      accumulator = modification(accumulator, item);
+    }}
+  return accumulator;
 };
