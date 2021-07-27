@@ -44,4 +44,12 @@ describe('reduce', () => {
   });
 });
 
+describe('every array', () => {
+  it('takes an array and a callback and returns true if all the callbacks return true', () => {
+    const array = [1, , 3, , 5, 6, , 7];
+    const modification = item => item > 5;
+    const actual = every(array, modification);
 
+    expect(actual).toEqual(false);
+  });
+});
